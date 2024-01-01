@@ -1,0 +1,18 @@
+:root{
+  --column: auto 1fr 1fr;
+}
+
+.layers_container{
+  border-top: 1px solid white;
+}
+
+.table_header_row{
+  display: grid;
+  grid-template-columns: var(--column);
+  gap: 10px;
+  border-bottom: 1px solid white;
+}
+
+.table_header{
+  padding: 5px;
+}

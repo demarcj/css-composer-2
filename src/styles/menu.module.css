@@ -1,0 +1,27 @@
+.menu{ border-bottom: 1px solid white; }
+
+.menu_list{ display: flex; }
+
+.menu_list > li{ padding: 10px; }
+
+.menu_list li{
+  cursor: pointer;
+  position: relative;
+  background-color: var(--bgc);
+}
+
+.menu_list li:hover{
+  background-color: var(--bgc-hover);
+}
+
+.menu_list > li:hover ul{
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.menu_list > li ul{
+  display: none;
+}

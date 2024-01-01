@@ -6,12 +6,10 @@ import {
 import './App.css'
 
 const App: React.FC = () => (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={ <Navigate to="/" /> } />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={ <Navigate to="/" /> } />
+    </Routes>
   )
 
 
