@@ -11,5 +11,5 @@ export default defineConfig({
       src: path.resolve('src/'),
     },
   },
-  base: '/'
+  base: '/css-composer-2/'
 })
