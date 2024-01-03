@@ -2,26 +2,41 @@
 
 .menu_list{ display: flex; }
 
-.menu_list > li{ padding: 10px; }
+.menu_list li div{ padding: 10px; }
 
 .menu_list li{
   cursor: pointer;
   position: relative;
   background-color: var(--bgc);
+  display: block;
+  white-space: nowrap;
 }
 
 .menu_list li:hover{
   background-color: var(--bgc-hover);
 }
 
-.menu_list > li:hover ul{
-  display: block;
+.menu_list li:hover > ul{
   position: absolute;
-  z-index: 1;
   top: 100%;
   left: 0;
+  min-width: 100%;
 }
 
-.menu_list > li ul{
+.menu_list li:hover > ul{
+  display: block;
+}
+
+.menu_list li:hover > ul ul{
+  left: 100%;
+  top: 0;
+}
+
+.menu_list li > ul{
   display: none;
+}
+
+.disabled{
+  color: black;
+  background-color: lightgray;
 }
