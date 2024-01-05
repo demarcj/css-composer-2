@@ -36,7 +36,12 @@
   display: none;
 }
 
-.disabled{
+.disabled {
   color: black;
   background-color: lightgray;
+  cursor: default;
+}
+
+.window{
+  border-right: 3px solid red;
 }

@@ -2,6 +2,9 @@ import { ElementModel } from 'src/interface'
 import styles from "src/styles/menu.module.css";
 
 export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
+  const display_window = (display: string) => {
+    console.log(display)
+  }
   return (
     <header className={styles.menu}>
       <ul className={styles.menu_list}>
@@ -12,13 +15,13 @@ export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
               <div className={!!elements.length ? '' : styles.disabled}>New Project</div>
             </li>
             <li>
-              <div>Open Project</div>
+              <div className={!!elements.length ? '' : styles.disabled}>Open Project</div>
             </li>
             <li>
-              <div>Save</div>
+              <div className={!!elements.length ? '' : styles.disabled}>Save</div>
               </li>
             <li>
-              <div>Export</div>
+              <div className={!!elements.length ? '' : styles.disabled}>Export</div>
             </li>
           </ul>
         </li>
@@ -26,7 +29,7 @@ export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
           <div>Edit</div>
           <ul>
             <li>
-              <div>Delete Element</div>
+              <div className={!!elements.length ? '' : styles.disabled}>Delete Element</div>
             </li>
           </ul>
         </li>
@@ -42,13 +45,13 @@ export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
           <div>Style</div>
           <ul>
             <li>
-              <div>Font</div>
+              <div className={!!elements.length ? '' : styles.disabled}>Font</div>
               <ul>
                 <li>
-                  <div>Size</div>
+                  <div className={!!elements.length ? '' : styles.disabled}>Size</div>
                 </li>
                 <li>
-                  <div>Weight</div>
+                  <div className={!!elements.length ? '' : styles.disabled}>Weight</div>
                 </li>
               </ul>
             </li>
@@ -64,10 +67,16 @@ export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
           <div>Window</div>
           <ul>
             <li>
-              <div>Style</div>
+              <div 
+                className={styles.window}
+                onClick={() => display_window(`styling`)}
+              >Style</div>
             </li>
             <li>
-              <div>Layers</div>
+              <div 
+                className={styles.window}
+                onClick={() => display_window(`layers`)}
+              >Layers</div>
             </li>
           </ul>
         </li>
