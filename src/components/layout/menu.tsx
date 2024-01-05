@@ -1,10 +1,8 @@
-import { ElementModel } from 'src/interface'
+import { MenuModel } from 'src/interface'
 import styles from "src/styles/menu.module.css";
 
-export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
-  const display_window = (display: string) => {
-    console.log(display)
-  }
+export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window}) => {
+  
   return (
     <header className={styles.menu}>
       <ul className={styles.menu_list}>
@@ -68,14 +66,14 @@ export const Menu: React.FC<{elements: ElementModel[]}> = ({elements}) => {
           <ul>
             <li>
               <div 
-                className={styles.window}
-                onClick={() => display_window(`styling`)}
-              >Style</div>
+                className={display_window.styling ? styles.window : ``}
+                onClick={() => show_window(`styling`, display_window)}
+              >Styling</div>
             </li>
             <li>
               <div 
-                className={styles.window}
-                onClick={() => display_window(`layers`)}
+                className={display_window.layers ? styles.window : ``}
+                onClick={() => show_window(`layers`, display_window)}
               >Layers</div>
             </li>
           </ul>
