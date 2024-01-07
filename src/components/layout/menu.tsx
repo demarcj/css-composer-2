@@ -67,13 +67,13 @@ export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window
             <li>
               <div 
                 className={display_window.styling ? styles.window : ``}
-                onClick={() => show_window(`styling`, display_window)}
+                onClick={() => show_window(`styling`)}
               >Styling</div>
             </li>
             <li>
               <div 
                 className={display_window.layers ? styles.window : ``}
-                onClick={() => show_window(`layers`, display_window)}
+                onClick={() => show_window(`layers`)}
               >Layers</div>
             </li>
           </ul>

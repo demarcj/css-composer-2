@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
   ];
   
   const init_display_window = () => {
-    let display_window_menu: {[key: string]: boolean} = {}; 
+    const display_window_menu: {[key: string]: boolean} = {}; 
     display_window_list.forEach(list => display_window_menu[list] = true);
     set_display_window({ ...display_window_menu});
   }
