@@ -1,7 +1,5 @@
 .menu{ border-bottom: 1px solid white; }
-
 .menu_list{ display: flex; }
-
 .menu_list li div{ padding: 10px; }
 
 .menu_list li{

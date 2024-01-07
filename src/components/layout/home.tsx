@@ -34,7 +34,7 @@ export const Home: React.FC = () => {
 
   useEffect(() => {
     !Object.keys(display_window).length && init_display_window();
-  }, [display_window]);
+  });
 
   return (
     <div className={styles.home}>
@@ -45,9 +45,13 @@ export const Home: React.FC = () => {
       />
       <div className={styles.main_styling_container}>
         <Main />
-        <StylingStage />
+        <StylingStage 
+          display_window={display_window}
+        />
       </div>
-      <Layers />
+      <Layers 
+          display_window={display_window}
+      />
       <Footer />
     </div>
   )

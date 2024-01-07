@@ -1,4 +1,4 @@
-import { MenuModel } from 'src/interface'
+import { MenuModel } from 'src/interface';
 import styles from "src/styles/menu.module.css";
 
 export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window}) => {

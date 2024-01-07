@@ -4,6 +4,7 @@
 
 .layers_container{
   border-top: 1px solid white;
+  flex: 1;
 }
 
 .table_header_row{
