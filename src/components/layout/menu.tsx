@@ -1,7 +1,7 @@
 import { MenuModel } from 'src/interface';
 import styles from "src/styles/menu.module.css";
 
-export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window}) => {
+export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window, open_about_dialog}) => {
   
   return (
     <header className={styles.menu}>
@@ -82,7 +82,9 @@ export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window
           <div>Help</div>
           <ul>
             <li>
-              <div>About...</div>
+              <div
+                onClick={() => open_about_dialog()}
+              >About...</div>
             </li>
           </ul>
         </li>

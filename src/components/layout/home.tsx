@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { 
+import {
   Footer,
   Layers,
   Main, 
   Menu,
   StylingStage
 } from './';
+import { About } from "src/components/dialog";
 import styles from 'src/styles/home.module.css';
 
 export const Home: React.FC = () => {
@@ -32,27 +33,35 @@ export const Home: React.FC = () => {
     set_display_window({ ...display_window_menu})
   }
 
+  const open_about_dialog = () => (document.querySelector(`#about`) as HTMLDialogElement).show();
+
   useEffect(() => {
     !Object.keys(display_window).length && init_display_window();
   });
 
   return (
-    <div className={styles.home}>
-      <Menu 
-        elements={elements}
-        show_window={show_window}
-        display_window={display_window}
-      />
-      <div className={styles.main_styling_container}>
-        <Main />
-        <StylingStage 
+    <>
+      <div className={styles.home}>
+        <Menu 
+          elements={elements}
+          show_window={show_window}
           display_window={display_window}
+          open_about_dialog={open_about_dialog}
         />
+        <div className={styles.main_styling_container}>
+          <Main />
+          <StylingStage 
+            display_window={display_window}
+          />
+        </div>
+        <Layers 
+            display_window={display_window}
+        />
+        <Footer />
+        {/* <div className="dialog"> */}
+          <About />
+        {/* </div> */}
       </div>
-      <Layers 
-          display_window={display_window}
-      />
-      <Footer />
-    </div>
+    </>
   )
 }
