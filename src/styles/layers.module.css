@@ -1,5 +1,5 @@
 :root{
-  --column: auto 1fr 1fr;
+  --column: 50px 1fr 1fr;
 }
 
 .layers_container{
@@ -12,8 +12,15 @@
   grid-template-columns: var(--column);
   gap: 10px;
   border-bottom: 1px solid white;
+  padding: 5px;
 }
 
-.table_header{
+.table_row{
+  display: grid;
+  grid-template-columns: var(--column);
+  gap: 10px;
   padding: 5px;
+  &:nth-child(odd){
+    background-color: #31303b;
+  }
 }

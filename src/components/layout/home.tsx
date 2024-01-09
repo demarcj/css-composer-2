@@ -14,9 +14,15 @@ export const Home: React.FC = () => {
   const display_window_list = [`styling`, `layers`];
   const elements = [
     {
-      order: 1,
+      order: 0,
       id: `heyssssss`,
-      class: ``,
+      class: `my name`,
+      style: [{fontSize: `36px`}]
+    },
+    {
+      order: 1,
+      id: `ididiididid`,
+      class: `new name`,
       style: [{fontSize: `36px`}]
     }
   ];
@@ -54,13 +60,12 @@ export const Home: React.FC = () => {
             display_window={display_window}
           />
         </div>
-        <Layers 
+        <Layers
+            elements={elements} 
             display_window={display_window}
         />
         <Footer />
-        {/* <div className="dialog"> */}
-          <About />
-        {/* </div> */}
+        <About />
       </div>
     </>
   )
