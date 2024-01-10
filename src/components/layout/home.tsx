@@ -17,13 +17,15 @@ export const Home: React.FC = () => {
       order: 0,
       id: `heyssssss`,
       class: `my name`,
-      style: [{fontSize: `36px`}]
+      style: [{fontSize: `36px`}],
+      text: `yooo!!!`
     },
     {
       order: 1,
       id: `ididiididid`,
       class: `new name`,
-      style: [{fontSize: `36px`}]
+      style: [{fontSize: `36px`}],
+      text: `My mustache`
     }
   ];
   
@@ -55,7 +57,9 @@ export const Home: React.FC = () => {
           open_about_dialog={open_about_dialog}
         />
         <div className={styles.main_styling_container}>
-          <Main />
+          <Main 
+            elements={elements}
+          />
           <StylingStage 
             display_window={display_window}
           />

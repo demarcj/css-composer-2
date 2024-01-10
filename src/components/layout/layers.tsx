@@ -14,15 +14,14 @@ export const Layers: React.FC<LayersModel> = ({display_window, elements}) => {
       </ul>
       <ul>
         {
-          elements.map((element, i) => {
-            return (
+          elements.map((element, i) => (
               <li key={i} className={styles.table_row}>
                 <div>{i}</div>
                 <div>{element.class}</div>
                 <div></div>
               </li>
             )
-          })
+          )
         }
       </ul>
     </section>
