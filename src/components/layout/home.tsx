@@ -8,9 +8,11 @@ import {
 } from './';
 import { About } from "src/components/dialog";
 import styles from 'src/styles/home.module.css';
+import { ElementModel } from "src/interface";
 
 export const Home: React.FC = () => {
   const [display_window, set_display_window] = useState({});
+  const [selected_element, set_selected_element] = useState({} as ElementModel);
   const display_window_list = [`styling`, `layers`];
   const elements = [
     {
@@ -41,6 +43,10 @@ export const Home: React.FC = () => {
     set_display_window({ ...display_window_menu})
   }
 
+  const select_element = (element: ElementModel) => {
+    set_selected_element(element)
+  }
+
   const open_about_dialog = () => (document.querySelector(`#about`) as HTMLDialogElement).show();
 
   useEffect(() => {
@@ -59,14 +65,17 @@ export const Home: React.FC = () => {
         <div className={styles.main_styling_container}>
           <Main 
             elements={elements}
+            select_element={select_element}
           />
           <StylingStage 
             display_window={display_window}
+            selected_element={selected_element}
           />
         </div>
         <Layers
             elements={elements} 
             display_window={display_window}
+            select_element={select_element}
         />
         <Footer />
         <About />
