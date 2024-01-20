@@ -1,7 +1,7 @@
-import { ElementModel } from "./";
+import { ElementMapModel, ElementModel } from "./";
 
 export type LayersModel = {
-  elements: ElementModel[];
+  elements: ElementMapModel;
   display_window: {[key: string]: boolean};
-  select_element: (element: ElementModel) => void;
+  select_elements: (elements: ElementModel) => void;
 }

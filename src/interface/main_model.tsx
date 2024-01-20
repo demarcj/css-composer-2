@@ -1,6 +1,7 @@
-import { ElementModel } from './';
+import {ElementMapModel, ElementModel } from './';
 
 export type MainModel = {
-  elements: ElementModel[];
-  select_element: (element: ElementModel) => void;
+  elements: ElementMapModel;
+  selected_elements: ElementMapModel;
+  select_elements: (elements: ElementModel) => void;
 }

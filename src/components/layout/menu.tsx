@@ -10,16 +10,16 @@ export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window
           <div>Project</div>
           <ul>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>New Project</div>
+              <div className={!!elements ? '' : styles.disabled}>New Project</div>
             </li>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>Open Project</div>
+              <div className={!!elements ? '' : styles.disabled}>Open Project</div>
             </li>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>Save</div>
+              <div className={!!elements ? '' : styles.disabled}>Save</div>
               </li>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>Export</div>
+              <div className={!!elements ? '' : styles.disabled}>Export</div>
             </li>
           </ul>
         </li>
@@ -27,7 +27,7 @@ export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window
           <div>Edit</div>
           <ul>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>Delete Element</div>
+              <div className={!!elements ? '' : styles.disabled}>Delete Element</div>
             </li>
           </ul>
         </li>
@@ -43,13 +43,13 @@ export const Menu: React.FC<MenuModel> = ({elements, show_window, display_window
           <div>Style</div>
           <ul>
             <li>
-              <div className={!!elements.length ? '' : styles.disabled}>Font</div>
+              <div className={!!elements ? '' : styles.disabled}>Font</div>
               <ul>
                 <li>
-                  <div className={!!elements.length ? '' : styles.disabled}>Size</div>
+                  <div className={!!elements ? '' : styles.disabled}>Size</div>
                 </li>
                 <li>
-                  <div className={!!elements.length ? '' : styles.disabled}>Weight</div>
+                  <div className={!!elements ? '' : styles.disabled}>Weight</div>
                 </li>
               </ul>
             </li>

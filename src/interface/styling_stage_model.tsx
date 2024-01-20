@@ -1,6 +1,6 @@
-import { ElementModel } from './';
+import { ElementMapModel } from './';
 
 export type StylingStageModel = {
   display_window: {[key: string]: boolean};
-  selected_element: ElementModel;
+  selected_elements: ElementMapModel;
 }

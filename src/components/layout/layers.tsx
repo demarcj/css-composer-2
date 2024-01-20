@@ -1,7 +1,7 @@
 import { LayersModel } from 'src/interface';
 import styles from "src/styles/layers.module.css";
 
-export const Layers: React.FC<LayersModel> = ({display_window, elements, select_element}) => {
+export const Layers: React.FC<LayersModel> = ({display_window, elements, select_elements}) => {
   return (
     <section 
       className={styles.layers_container}
@@ -14,11 +14,11 @@ export const Layers: React.FC<LayersModel> = ({display_window, elements, select_
       </ul>
       <ul>
         {
-          elements.map((element, i) => (
+          Object.values(elements).map((element, i) => (
               <li 
                 key={i} 
                 className={styles.table_row}
-                onClick={() => select_element(element)}
+                onClick={() => select_elements(element)}
               >
                 <div>{i}</div>
                 <div>{element.class}</div>
